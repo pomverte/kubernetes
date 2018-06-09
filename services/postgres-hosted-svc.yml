@@ -1,0 +1,10 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: postgres-service
+spec:
+  type: ExternalName
+  externalName: my.postgres.com
+  ports:
+  - port: 5432

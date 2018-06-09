@@ -2,8 +2,8 @@
 
  kubectl version
 
- kubectl apply -f ./tomcat/tomcat-deploy.yml --record
- kubectl apply -f ./services/tomcat-svc.yml
+ kubectl apply -f ./tomcat/tomcat-deploy.yml --namespace=sandbox --record
+ kubectl apply -f ./services/tomcat-svc.yml --namespace=sandbox
 
  kubectl get svc
  kubectl get deploy
@@ -29,3 +29,6 @@ NOTE: organize layout by service or k8s objects ?
 * https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 * https://www.katacoda.com/courses/kubernetes/playground
 * https://labs.play-with-k8s.com/
+* https://github.com/kubernetes-incubator/kubespray
+* https://www.weave.works/blog/kubernetes-best-practices
+* https://speakerdeck.com/thesandlord/kubernetes-best-practices
