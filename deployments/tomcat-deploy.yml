@@ -14,6 +14,7 @@ spec:
     metadata:
       labels:
         app: tomcat
+        type: backend
         project: area51
         env: sandbox
     spec:
