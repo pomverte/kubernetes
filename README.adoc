@@ -9,6 +9,10 @@
  kubectl get deploy
  kubectl get ev
 
+ kubectl get nodes --output=json
+ kubectl get nodes --output=jsonpath="{.items[*]}
+ kubectl get nodes --output=jsonpath="{.items[0].metadata.name}
+
 NOTE: organize layout by service or k8s objects ?
 
 == TODO
