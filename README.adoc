@@ -15,8 +15,8 @@ NOTE: organize layout by service or k8s objects ?
 
 * Service type : https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
 * DNS service access
-  * https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#services
-  * https://kubernetes.io/docs/concepts/services-networking/service/#dns
+** https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#services
+** https://kubernetes.io/docs/concepts/services-networking/service/#dns
 * Ingress : https://kubernetes.io/docs/concepts/services-networking/ingress/
 * Pod Security Policies : https://kubernetes.io/docs/concepts/policy/pod-security-policy/
 * Network Policies : https://kubernetes.io/docs/concepts/services-networking/network-policies/
