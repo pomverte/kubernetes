@@ -13,6 +13,8 @@
  kubectl get nodes --output=jsonpath="{.items[*]}
  kubectl get nodes --output=jsonpath="{.items[0].metadata.name}
 
+TIPS: https://jqplay.org/
+
 NOTE: organize layout by service or k8s objects ?
 
 == TODO
