@@ -1,0 +1,31 @@
+= Kubernetes sandbox
+
+ kubectl version
+
+ kubectl apply -f ./tomcat/tomcat-deploy.yml --record
+ kubectl apply -f ./services/tomcat-svc.yml
+
+ kubectl get svc
+ kubectl get deploy
+ kubectl get ev
+
+NOTE: organize layout by service or k8s objects ?
+
+== TODO
+
+* Service type : https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
+* DNS service access
+  * https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#services
+  * https://kubernetes.io/docs/concepts/services-networking/service/#dns
+* Ingress : https://kubernetes.io/docs/concepts/services-networking/ingress/
+* Pod Security Policies : https://kubernetes.io/docs/concepts/policy/pod-security-policy/
+* Network Policies : https://kubernetes.io/docs/concepts/services-networking/network-policies/
+* Helm Package manager : https://helm.sh/
+* Istio : https://istio.io/
+
+== References
+
+* https://kubernetes.io/docs/concepts/
+* https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+* https://www.katacoda.com/courses/kubernetes/playground
+* https://labs.play-with-k8s.com/

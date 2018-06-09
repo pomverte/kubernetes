@@ -1,0 +1,42 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tomcat-deployment
+  labels:
+    app: tomcat
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tomcat
+  template:
+    metadata:
+      labels:
+        app: tomcat
+    spec:
+      securityContext:
+        runAsNonRoot: false
+        runAsUser: tomcat
+        fsGroup: 2000
+      containers:
+      - name: tomcat
+        image: tomcat:9-jre8-alpine
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        securityContext:
+          allowPrivilegeEscalation: false
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          failureThreshold: 30
+          initialDelaySeconds: 30
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 15
+          periodSeconds: 3
+          failureThreshold: 60
