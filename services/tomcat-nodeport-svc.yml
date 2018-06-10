@@ -8,6 +8,6 @@ spec:
     app: tomcat
   type: NodePort
   ports:
-  - protocol: TCP
-    port: 8080
-    nodePort: 38080
+    - protocol: TCP
+      port: 8080
+      nodePort: 38080
