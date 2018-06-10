@@ -20,7 +20,7 @@ spec:
     spec:
       securityContext:
         runAsNonRoot: false
-        runAsUser: tomcat
+        runAsUser: 1234
         fsGroup: 2000
       containers:
       - name: tomcat
