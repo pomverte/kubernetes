@@ -1,6 +1,7 @@
 = Kubernetes sandbox
 
  kubectl version
+ kubectl cluster-info
 
  kubectl apply -f ./tomcat/tomcat-deploy.yml --namespace=sandbox --record
  kubectl apply -f ./services/tomcat-svc.yml --namespace=sandbox
