@@ -2,7 +2,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: tomcat-service
+  name: tomcat-nodeport-service
 spec:
   selector:
     app: tomcat
@@ -10,4 +10,4 @@ spec:
   ports:
   - protocol: TCP
     port: 8080
-    nodePort: 31097
+    nodePort: 38080
