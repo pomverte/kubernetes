@@ -34,6 +34,11 @@ kubectl expose deployment hello-minikube --type=NodePort
 curl $(minikube service hello-minikube --url)
 ----
 
+----
+kubectl delete services hello-minikube
+kubectl delete deployment hello-minikube
+----
+
 == TODO
 
 * Service type : https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
